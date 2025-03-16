@@ -1,0 +1,2 @@
+{"level":"INFO","time":"2025-03-16T23:06:21.245+0800","caller":"core/server.go:25","msg":"server run success on ","address":"0.0.0.0:8080"}
+{"level":"ERROR","time":"2025-03-16T23:06:29.137+0800","caller":"core/server.go:26","msg":"accept tcp [::]:8080: use of closed network connection"}
