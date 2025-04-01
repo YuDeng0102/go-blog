@@ -1,2 +1,41 @@
 {"level":"INFO","time":"2025-03-16T23:06:21.245+0800","caller":"core/server.go:25","msg":"server run success on ","address":"0.0.0.0:8080"}
 {"level":"ERROR","time":"2025-03-16T23:06:29.137+0800","caller":"core/server.go:26","msg":"accept tcp [::]:8080: use of closed network connection"}
+{"level":"ERROR","time":"2025-03-21T14:24:18.189+0800","caller":"initialize/gorm.go:19","msg":"Failed to connect to mysql","error":"Error 1045 (28000): Access denied for user 'root'@'localhost' (using password: YES)"}
+{"level":"INFO","time":"2025-03-21T14:26:02.792+0800","caller":"core/server.go:25","msg":"server run success on ","address":"0.0.0.0:8080"}
+{"level":"INFO","time":"2025-03-21T14:26:02.792+0800","caller":"initialize/corn.go:17","msg":"start","keysAndValues":null}
+{"level":"ERROR","time":"2025-03-21T14:28:00.796+0800","caller":"core/server.go:26","msg":"accept tcp [::]:8080: use of closed network connection"}
+{"level":"INFO","time":"2025-03-28T15:50:18.623+0800","caller":"core/server.go:25","msg":"server run success on ","address":"0.0.0.0:8080"}
+{"level":"INFO","time":"2025-03-28T15:50:18.623+0800","caller":"initialize/corn.go:17","msg":"start","keysAndValues":null}
+{"level":"INFO","time":"2025-03-28T15:52:33.769+0800","caller":"core/server.go:25","msg":"server run success on ","address":"0.0.0.0:8080"}
+{"level":"INFO","time":"2025-03-28T15:52:33.769+0800","caller":"initialize/corn.go:17","msg":"start","keysAndValues":null}
+{"level":"ERROR","time":"2025-03-28T15:52:33.770+0800","caller":"core/server.go:26","msg":"net.Listen error: listen tcp 0.0.0.0:8080: bind: address already in use"}
+{"level":"INFO","time":"2025-03-28T15:52:48.399+0800","caller":"core/server.go:25","msg":"server run success on ","address":"0.0.0.0:8080"}
+{"level":"INFO","time":"2025-03-28T15:52:48.399+0800","caller":"initialize/corn.go:17","msg":"start","keysAndValues":null}
+{"level":"ERROR","time":"2025-03-28T15:52:48.399+0800","caller":"core/server.go:26","msg":"net.Listen error: listen tcp 0.0.0.0:8080: bind: address already in use"}
+{"level":"ERROR","time":"2025-03-28T15:55:02.468+0800","caller":"core/server.go:26","msg":"accept tcp [::]:8080: use of closed network connection"}
+{"level":"INFO","time":"2025-03-28T15:55:07.996+0800","caller":"core/server.go:25","msg":"server run success on ","address":"0.0.0.0:8080"}
+{"level":"INFO","time":"2025-03-28T15:55:07.996+0800","caller":"initialize/corn.go:17","msg":"start","keysAndValues":null}
+{"level":"INFO","time":"2025-03-28T16:00:59.609+0800","caller":"core/server.go:25","msg":"server run success on ","address":"0.0.0.0:8080"}
+{"level":"INFO","time":"2025-03-28T16:00:59.609+0800","caller":"initialize/corn.go:17","msg":"start","keysAndValues":null}
+{"level":"ERROR","time":"2025-03-28T16:00:59.609+0800","caller":"core/server.go:26","msg":"accept tcp [::]:8080: use of closed network connection"}
+{"level":"ERROR","time":"2025-03-28T16:01:19.078+0800","caller":"core/server.go:26","msg":"accept tcp [::]:8080: use of closed network connection"}
+{"level":"INFO","time":"2025-03-30T22:04:13.032+0800","caller":"core/server.go:25","msg":"server run success on ","address":"0.0.0.0:8080"}
+{"level":"INFO","time":"2025-03-30T22:04:13.033+0800","caller":"initialize/corn.go:17","msg":"start","keysAndValues":null}
+{"level":"ERROR","time":"2025-03-30T22:05:31.726+0800","caller":"core/server.go:26","msg":"accept tcp [::]:8080: use of closed network connection"}
+{"level":"INFO","time":"2025-03-31T12:14:27.292+0800","caller":"flag/enter.go:36","msg":"Successfully created table structure"}
+{"level":"INFO","time":"2025-03-31T12:22:10.406+0800","caller":"flag/enter.go:36","msg":"Successfully created table structure"}
+{"level":"INFO","time":"2025-03-31T16:05:46.945+0800","caller":"flag/enter.go:72","msg":"Successfully created ES indices"}
+{"level":"ERROR","time":"2025-03-31T21:23:09.290+0800","caller":"initialize/gorm.go:19","msg":"Failed to connect to mysql","error":"dial tcp 127.0.0.1:3307: connect: connection refused"}
+{"level":"INFO","time":"2025-03-31T21:23:49.250+0800","caller":"flag/enter.go:102","msg":"Successfully created an administrator"}
+{"level":"INFO","time":"2025-04-01T12:23:03.325+0800","caller":"core/server.go:25","msg":"server run success on ","address":"0.0.0.0:8080"}
+{"level":"INFO","time":"2025-04-01T12:23:03.325+0800","caller":"initialize/corn.go:17","msg":"start","keysAndValues":null}
+{"level":"INFO","time":"2025-04-01T12:28:04.521+0800","caller":"core/server.go:25","msg":"server run success on ","address":"0.0.0.0:8080"}
+{"level":"INFO","time":"2025-04-01T12:28:04.521+0800","caller":"initialize/corn.go:17","msg":"start","keysAndValues":null}
+{"level":"ERROR","time":"2025-04-01T12:28:04.521+0800","caller":"core/server.go:26","msg":"accept tcp [::]:8080: use of closed network connection"}
+{"level":"ERROR","time":"2025-04-01T12:31:58.256+0800","caller":"core/server.go:26","msg":"accept tcp [::]:8080: use of closed network connection"}
+{"level":"INFO","time":"2025-04-01T16:00:48.151+0800","caller":"core/server.go:25","msg":"server run success on ","address":"0.0.0.0:8080"}
+{"level":"INFO","time":"2025-04-01T16:00:48.151+0800","caller":"initialize/corn.go:17","msg":"start","keysAndValues":null}
+{"level":"ERROR","time":"2025-04-01T16:40:42.522+0800","caller":"core/server.go:26","msg":"accept tcp [::]:8080: use of closed network connection"}
+{"level":"INFO","time":"2025-04-01T16:40:45.740+0800","caller":"core/server.go:25","msg":"server run success on ","address":"0.0.0.0:8080"}
+{"level":"INFO","time":"2025-04-01T16:40:45.740+0800","caller":"initialize/corn.go:17","msg":"start","keysAndValues":null}
+{"level":"ERROR","time":"2025-04-01T16:46:57.334+0800","caller":"core/server.go:26","msg":"accept tcp [::]:8080: use of closed network connection"}

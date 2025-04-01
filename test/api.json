@@ -1,0 +1,81 @@
+{
+  "info": {
+    "_postman_id": "4119ec4e-a173-41e2-9db9-d06f65a99fa9",
+    "name": "go_blog",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "29975670"
+  },
+  "item": [
+    {
+      "name": "base",
+      "item": [
+        {
+          "name": "captcha",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{go_blog_url}}/api/base/captcha",
+              "host": [
+                "{{go_blog_url}}"
+              ],
+              "path": [
+                "api",
+                "base",
+                "captcha"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "sendEmailVerificationCode",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\": \"\",\r\n    \"captcha\": \"\",\r\n    \"captcha_id\": \"\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{go_blog_url}}/api/base/sendEmailVerificationCode",
+              "host": [
+                "{{go_blog_url}}"
+              ],
+              "path": [
+                "api",
+                "base",
+                "sendEmailVerificationCode"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "qqLoginURL",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{go_blog_url}}/api/base/qqLoginURL",
+              "host": [
+                "{{go_blog_url}}"
+              ],
+              "path": [
+                "api",
+                "base",
+                "qqLoginURL"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}

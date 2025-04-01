@@ -7,9 +7,9 @@ captcha:
 email:
     host: smtp.qq.com
     port: 465
-    from: xxx@qq.com
-    nickname: 发件人昵称
-    secret: xxxxxxxxxxxxxxxx
+    from: 2272776615@qq.com
+    nickname: 原神哥
+    secret: crutbzcmqgptdjch
     is_ssl: true
 es:
     url: http://127.0.0.1:9200
@@ -27,7 +27,7 @@ jwt:
     issuer: go_blog
 mysql:
     host: 127.0.0.1
-    port: 3306
+    port: 3307
     config: charset=utf8mb4&parseTime=True&loc=Local
     db_name: blog_db
     username: root
@@ -58,7 +58,7 @@ system:
     env: release
     router_prefix: api
     use_multipoint: true
-    sessions_secret: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+    sessions_secret: fZ9Jxfw5Kb2ra-UP6E3X2mG1LpcaV5mRUW-H6E2lwNs=
     oss_type: local
 upload:
     size: 20
