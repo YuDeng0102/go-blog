@@ -17,11 +17,11 @@ es:
     password: ""
     is_console_print: true
 gaode:
-    enable: false
-    key: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+    enable: true
+    key: 473d20d7f3e813c82cbd28979b7a049b
 jwt:
-    access_token_secret: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-    refresh_token_secret: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+    access_token_secret: IcGEfB2w8eKhBEiuVnDr9PGKXcsdgJ8oGUlw2cUvViI=
+    refresh_token_secret:  CF45WzHCTBxXcy66Oe1pHswHJzzKNV3Lv9bH7hEOKlU=
     access_token_expiry_time: 2h
     refresh_token_expiry_time: 7d
     issuer: go_blog
