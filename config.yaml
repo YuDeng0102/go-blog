@@ -36,12 +36,12 @@ mysql:
     max_open_conns: 100
     log_mode: info
 qiniu:
-    zone: z0
-    bucket: xxx
-    img_path: https://xxx.xxx/
-    access_key: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-    secret_key: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-    use_https: true
+    zone: z2
+    bucket: yudeng
+    img_path: http://sue7mxmf6.hn-bkt.clouddn.com/
+    access_key: Lj2fd6Jk6Yb39otS4yX_1DjxiNR54TNOi0yu7K-G
+    secret_key: X5jBl33CErgivJBUhds2fLax62GFhAiEnvkffeQK
+    use_https: false
     use_cdn_domains: true
 qq:
     enable: false
@@ -59,7 +59,7 @@ system:
     router_prefix: api
     use_multipoint: true
     sessions_secret: fZ9Jxfw5Kb2ra-UP6E3X2mG1LpcaV5mRUW-H6E2lwNs=
-    oss_type: local
+    oss_type: qiniu
 upload:
     size: 20
     path: uploads
