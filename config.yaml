@@ -21,7 +21,7 @@ gaode:
     key: 473d20d7f3e813c82cbd28979b7a049b
 jwt:
     access_token_secret: IcGEfB2w8eKhBEiuVnDr9PGKXcsdgJ8oGUlw2cUvViI=
-    refresh_token_secret:  CF45WzHCTBxXcy66Oe1pHswHJzzKNV3Lv9bH7hEOKlU=
+    refresh_token_secret: CF45WzHCTBxXcy66Oe1pHswHJzzKNV3Lv9bH7hEOKlU=
     access_token_expiry_time: 2h
     refresh_token_expiry_time: 7d
     issuer: go_blog
@@ -64,9 +64,9 @@ upload:
     size: 20
     path: uploads
 website:
-    logo: ""
-    full_logo: ""
-    title: 博客标题-xxx的个人博客
+    logo: https://iili.io/30DJ7sI.jpg
+    full_logo: http://sue7mxmf6.hn-bkt.clouddn.com/cff5211b793f64ff6fbda36479c2ffc8-20250417134306.jpeg
+    title: yudeng的个人博客
     slogan: 博客标题
     slogan_en: Blog Title
     description: 博客描述
@@ -77,10 +77,10 @@ website:
     bilibili_url: https://space.bilibili.com/xxx
     gitee_url: https://gitee.com/xxx
     github_url: https://github.com/xxx/
-    name: 昵称
-    job: 工作
-    address: 地址
-    email: xxx@qq.com
+    name: 月影几度凉
+    job: 学生
+    address: 江苏苏州
+    email: 2272776615@qq.com
     qq_image: ""
     wechat_image: ""
 zap:

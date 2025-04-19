@@ -5,6 +5,12 @@ type ApiGroup struct {
 	UserApi
 	ImageApi
 	ArticleApi
+	CommentApi
+	AdvertisementApi
+	FriendLinkApi
+	FeedbackApi
+	WebsiteApi
+	ConfigApi
 }
 
 var ApiGroupApp = new(ApiGroup)

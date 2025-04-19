@@ -158,10 +158,13 @@ func (articleService *ArticleService) ArticleLike(req request.ArticleLike) error
 
 func (articleService *ArticleService) ArticleIsLike(req request.ArticleLike) (bool, error) {
 	var articleLike database.ArticleLike
-	if err := global.DB.Where("user_id = ? AND article_id = ?", req.UserID, req.ArticleID).First(&articleLike).Error; err != nil {
-		return false, err
+	err := global.DB.Where("user_id = ? AND article_id = ?", req.UserID, req.ArticleID).First(&articleLike).Error
+	if err == nil {
+		return true, nil
+	} else if errors.Is(err, gorm.ErrRecordNotFound) {
+		return false, nil
 	}
-	return true, nil
+	return false, nil
 }
 
 func (articleService *ArticleService) ArticleLikesList(info request.ArticleLikesList) (interface{}, int64, error) {

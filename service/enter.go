@@ -8,10 +8,14 @@ type ServiceGroup struct {
 	UserService
 	ImageService
 	ArticleService
+	CommentService
+	AdvertisementService
+	FriendLinkService
+	FeedbackService
+	WebsiteService
+	HotSearchService
+	CalendarService
+	ConfigService
 }
 
 var ServiceGroupApp = new(ServiceGroup)
-
-var baseService = ServiceGroupApp.BaseService
-var userService = ServiceGroupApp.UserService
-var jwtService = ServiceGroupApp.JwtService

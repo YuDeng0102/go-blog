@@ -2,10 +2,6 @@ package api
 
 import (
 	"errors"
-	"github.com/gin-contrib/sessions"
-	"github.com/gin-gonic/gin"
-	"github.com/go-redis/redis"
-	"go.uber.org/zap"
 	"server/global"
 	"server/model/database"
 	"server/model/request"
@@ -13,6 +9,11 @@ import (
 	"server/service"
 	"server/utils"
 	"time"
+
+	"github.com/gin-contrib/sessions"
+	"github.com/gin-gonic/gin"
+	"github.com/go-redis/redis"
+	"go.uber.org/zap"
 )
 
 type UserApi struct{}
@@ -293,6 +294,7 @@ func (userApi *UserApi) UserChangeInfo(c *gin.Context) {
 // UserWeather 获取天气
 func (userApi *UserApi) UserWeather(c *gin.Context) {
 	ip := c.ClientIP()
+	// global.Log.Info("Client IP", zap.String("ip", ip))
 	//ip := "112.2.249.25"
 	weather, err := service.ServiceGroupApp.UserService.UserWeather(ip)
 	if err != nil {

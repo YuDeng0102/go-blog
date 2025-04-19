@@ -9,7 +9,7 @@ import (
 type ArticleRouter struct{}
 
 func (a *ArticleRouter) InitArticleRouter(Router *gin.RouterGroup, PublicRouter *gin.RouterGroup, AdminRouter *gin.RouterGroup) {
-	articleRouter := AdminRouter.Group("article")
+	articleRouter := Router.Group("article")
 	articlePublic := PublicRouter.Group("article")
 	articleAdminRouter := AdminRouter.Group("article")
 
