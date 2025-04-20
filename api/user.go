@@ -343,3 +343,79 @@ func (userApi *UserApi) UserChart(c *gin.Context) {
 //		Total: total,
 //	}, c)
 //}
+
+// UserList 获取用户列表
+func (userApi *UserApi) UserList(c *gin.Context) {
+	var pageInfo request.UserList
+	err := c.ShouldBindQuery(&pageInfo)
+	if err != nil {
+		response.FailWithMessage(err.Error(), c)
+		return
+	}
+
+	list, total, err := service.ServiceGroupApp.UserService.UserList(pageInfo)
+	if err != nil {
+		global.Log.Error("Failed to get user list:", zap.Error(err))
+		response.FailWithMessage("Failed to get user list", c)
+		return
+	}
+	response.OkWithData(response.PageResult{
+		List:  list,
+		Total: total,
+	}, c)
+}
+
+// UserFreeze 冻结用户
+func (userApi *UserApi) UserFreeze(c *gin.Context) {
+	var req request.UserOperation
+	err := c.ShouldBindJSON(&req)
+	if err != nil {
+		response.FailWithMessage(err.Error(), c)
+		return
+	}
+	err = service.ServiceGroupApp.UserService.UserFreeze(req)
+	if err != nil {
+		global.Log.Error("Failed to freeze user:", zap.Error(err))
+		response.FailWithMessage("Failed to freeze user", c)
+		return
+	}
+	response.OkWithMessage("Successfully freeze user", c)
+}
+
+// UserUnfreeze 解冻用户
+func (userApi *UserApi) UserUnfreeze(c *gin.Context) {
+	var req request.UserOperation
+	err := c.ShouldBindJSON(&req)
+	if err != nil {
+		response.FailWithMessage(err.Error(), c)
+		return
+	}
+	err = service.ServiceGroupApp.UserService.UserUnfreeze(req)
+	if err != nil {
+		global.Log.Error("Failed to unfreeze user:", zap.Error(err))
+		response.FailWithMessage("Failed to unfreeze user", c)
+		return
+	}
+	response.OkWithMessage("Successfully unfreeze user", c)
+}
+
+// UserLoginList 获取登录日志列表
+func (userApi *UserApi) UserLoginList(c *gin.Context) {
+	var pageInfo request.UserLoginList
+	err := c.ShouldBindQuery(&pageInfo)
+	if err != nil {
+		response.FailWithMessage(err.Error(), c)
+		return
+	}
+
+	list, total, err := service.ServiceGroupApp.UserService.UserLoginList(pageInfo)
+	if err != nil {
+		global.Log.Error("Failed to get user login list:", zap.Error(err))
+		response.FailWithMessage("Failed to get user login list", c)
+		return
+	}
+	response.OkWithData(response.PageResult{
+		List:  list,
+		Total: total,
+	}, c)
+}

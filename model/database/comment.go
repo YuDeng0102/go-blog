@@ -1,12 +1,10 @@
 package database
 
 import (
-	"context"
+	"encoding/json"
 	"server/global"
-	"server/model/elasticsearch"
+	"server/rabbitmq"
 
-	"github.com/elastic/go-elasticsearch/v8/typedapi/types"
-	"github.com/elastic/go-elasticsearch/v8/typedapi/types/enums/scriptlanguage"
 	"github.com/gofrs/uuid"
 	"gorm.io/gorm"
 )
@@ -25,9 +23,16 @@ type Comment struct {
 
 // AfterCreate 钩子，创建后调用
 func (c *Comment) AfterCreate(_ *gorm.DB) error {
-	source := "ctx._source.comments += 1"
-	script := types.Script{Source: &source, Lang: &scriptlanguage.Painless}
-	_, err := global.ESClient.Update(elasticsearch.ArticleIndex(), c.ArticleID).Script(&script).Do(context.TODO())
+	// source := "ctx._source.comments += 1"
+	// script := types.Script{Source: &source, Lang: &scriptlanguage.Painless}
+	// _, err := global.ESClient.Update(elasticsearch.ArticleIndex(), c.ArticleID).Script(&script).Do(context.TODO())
+	event := rabbitmq.ESEvent{
+		ArticleID: c.ArticleID,
+		Field:     "comments",
+		Delta:     1,
+	}
+	msgBytes, _ := json.Marshal(event)
+	err := rabbitmq.PublishMessage(global.RmqConn, "es_update_queue", msgBytes)
 	return err
 }
 
@@ -37,8 +42,16 @@ func (c *Comment) BeforeDelete(_ *gorm.DB) error {
 	if err := global.DB.Model(&c).Pluck("article_id", &articleID).Error; err != nil {
 		return err
 	}
-	source := "ctx._source.comments -= 1"
-	script := types.Script{Source: &source, Lang: &scriptlanguage.Painless}
-	_, err := global.ESClient.Update(elasticsearch.ArticleIndex(), articleID).Script(&script).Do(context.TODO())
+	// source := "ctx._source.comments -= 1"
+	// script := types.Script{Source: &source, Lang: &scriptlanguage.Painless}
+	// _, err := global.ESClient.Update(elasticsearch.ArticleIndex(), articleID).Script(&script).Do(context.TODO())
+
+	event := rabbitmq.ESEvent{
+		ArticleID: articleID,
+		Field:     "comments",
+		Delta:     -1,
+	}
+	msgBytes, _ := json.Marshal(event)
+	err := rabbitmq.PublishMessage(global.RmqConn, "es_update_queue", msgBytes)
 	return err
 }

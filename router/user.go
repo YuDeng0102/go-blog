@@ -1,9 +1,10 @@
 package router
 
 import (
-	"github.com/gin-gonic/gin"
 	"server/api"
 	"server/middleware"
+
+	"github.com/gin-gonic/gin"
 )
 
 type UserRouter struct{}
@@ -12,7 +13,7 @@ func (u *UserRouter) InitUserRouter(Router *gin.RouterGroup, PublicRouter *gin.R
 	userRouter := Router.Group("user")
 	userPublicRouter := PublicRouter.Group("user")
 	userLoginRouter := PublicRouter.Group("user").Use(middleware.LoginRecord())
-	//userAdminRouter := AdminRouter.Group("user")
+	userAdminRouter := AdminRouter.Group("user")
 	userApi := api.ApiGroupApp.UserApi
 	{
 		userRouter.POST("logout", userApi.Logout)
@@ -31,9 +32,9 @@ func (u *UserRouter) InitUserRouter(Router *gin.RouterGroup, PublicRouter *gin.R
 		userLoginRouter.POST("login", userApi.Login)
 	}
 	{
-		//userAdminRouter.GET("list", userApi.UserList)
-		//userAdminRouter.PUT("freeze", userApi.UserFreeze)
-		//userAdminRouter.PUT("unfreeze", userApi.UserUnfreeze)
-		//userAdminRouter.GET("loginList", userApi.UserLoginList)
+		userAdminRouter.GET("list", userApi.UserList)
+		userAdminRouter.PUT("freeze", userApi.UserFreeze)
+		userAdminRouter.PUT("unfreeze", userApi.UserUnfreeze)
+		userAdminRouter.GET("loginList", userApi.UserLoginList)
 	}
 }

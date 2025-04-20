@@ -2,6 +2,7 @@ package service
 
 import (
 	"context"
+	"encoding/json"
 	"errors"
 	"server/global"
 	"server/model/appTypes"
@@ -9,14 +10,14 @@ import (
 	"server/model/elasticsearch"
 	"server/model/other"
 	"server/model/request"
+	"server/rabbitmq"
 	"server/utils"
-	"strconv"
 	"time"
 
 	"github.com/elastic/go-elasticsearch/v8/typedapi/core/search"
 	"github.com/elastic/go-elasticsearch/v8/typedapi/types"
-	"github.com/elastic/go-elasticsearch/v8/typedapi/types/enums/scriptlanguage"
 	"github.com/elastic/go-elasticsearch/v8/typedapi/types/enums/sortorder"
+	"go.uber.org/zap"
 	"gorm.io/gorm"
 )
 
@@ -25,8 +26,18 @@ type ArticleService struct{}
 func (articleService *ArticleService) ArticleInfoByID(req request.ArticleInfoByID) (elasticsearch.Article, error) {
 	// 异步更新浏览量
 	go func() {
-		articleView := articleService.NewArticleView()
-		_ = articleView.Set(req.ID)
+		// articleView := articleService.NewArticleView()
+		// _ = articleView.Set(req.ID)
+		event := rabbitmq.ESEvent{
+			ArticleID: req.ID,
+			Field:     "views",
+			Delta:     1,
+		}
+		msgBytes, _ := json.Marshal(event)
+		err := rabbitmq.PublishMessage(global.RmqConn, "es_update_queue", msgBytes)
+		if err != nil {
+			global.Log.Error("Failed to publish message:", zap.Error(err))
+		}
 	}()
 	return articleService.Get(req.ID)
 }
@@ -148,10 +159,18 @@ func (articleService *ArticleService) ArticleLike(req request.ArticleLike) error
 			num = -1
 		}
 
-		// 更新文章收藏数
-		source := "ctx._source.likes += " + strconv.Itoa(num)
-		script := types.Script{Source: &source, Lang: &scriptlanguage.Painless}
-		_, err := global.ESClient.Update(elasticsearch.ArticleIndex(), req.ArticleID).Script(&script).Do(context.TODO())
+		// source := "ctx._source.likes += " + strconv.Itoa(num)
+		// script := types.Script{Source: &source, Lang: &scriptlanguage.Painless}
+		// _, err := global.ESClient.Update(elasticsearch.ArticleIndex(), req.ArticleID).Script(&script).Do(context.TODO())
+
+		// 发送消息到 RabbitMQ
+		event := rabbitmq.ESEvent{
+			ArticleID: req.ArticleID,
+			Field:     "likes",
+			Delta:     num,
+		}
+		msgBytes, _ := json.Marshal(event)
+		err := rabbitmq.PublishMessage(global.RmqConn, "es_update_queue", msgBytes)
 		return err
 	})
 }

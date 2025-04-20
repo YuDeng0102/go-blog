@@ -1474,3 +1474,105 @@
 {"level":"INFO","time":"2025-04-17T15:00:00.000+0800","caller":"initialize/corn.go:17","msg":"run","keysAndValues":["now","2025-04-17T15:00:00.000053038+08:00","entry",3,"next","2025-04-17T16:00:00+08:00"]}
 {"level":"ERROR","time":"2025-04-17T15:00:00.022+0800","caller":"task/enter.go:13","msg":"Failed to update article views:","error":"status: 404, failed: [document_missing_exception], reason: [like]: document missing"}
 {"level":"ERROR","time":"2025-04-17T15:01:41.487+0800","caller":"core/server.go:26","msg":"accept tcp [::]:8080: use of closed network connection"}
+{"level":"ERROR","time":"2025-04-19T23:11:24.843+0800","caller":"initialize/gorm.go:19","msg":"Failed to connect to mysql","error":"dial tcp 127.0.0.1:3307: connect: connection refused"}
+{"level":"INFO","time":"2025-04-19T23:11:48.274+0800","caller":"core/server.go:25","msg":"server run success on ","address":"0.0.0.0:8080"}
+{"level":"INFO","time":"2025-04-19T23:11:48.274+0800","caller":"initialize/corn.go:17","msg":"start","keysAndValues":null}
+{"level":"INFO","time":"2025-04-19T23:11:48.274+0800","caller":"initialize/corn.go:17","msg":"schedule","keysAndValues":["now","2025-04-19T23:11:48.274654892+08:00","entry",1,"next","2025-04-20T00:00:00+08:00"]}
+{"level":"INFO","time":"2025-04-19T23:11:48.274+0800","caller":"initialize/corn.go:17","msg":"schedule","keysAndValues":["now","2025-04-19T23:11:48.274654892+08:00","entry",2,"next","2025-04-20T00:00:00+08:00"]}
+{"level":"INFO","time":"2025-04-19T23:11:48.274+0800","caller":"initialize/corn.go:17","msg":"schedule","keysAndValues":["now","2025-04-19T23:11:48.274654892+08:00","entry",3,"next","2025-04-20T00:00:00+08:00"]}
+{"level":"ERROR","time":"2025-04-19T23:11:51.016+0800","caller":"core/server.go:26","msg":"accept tcp [::]:8080: use of closed network connection"}
+{"level":"INFO","time":"2025-04-20T11:43:21.399+0800","caller":"core/server.go:25","msg":"server run success on ","address":"0.0.0.0:8080"}
+{"level":"INFO","time":"2025-04-20T11:43:21.398+0800","caller":"initialize/corn.go:17","msg":"start","keysAndValues":null}
+{"level":"INFO","time":"2025-04-20T11:43:21.399+0800","caller":"initialize/corn.go:17","msg":"schedule","keysAndValues":["now","2025-04-20T11:43:21.399478287+08:00","entry",1,"next","2025-04-20T12:00:00+08:00"]}
+{"level":"INFO","time":"2025-04-20T11:43:21.399+0800","caller":"initialize/corn.go:17","msg":"schedule","keysAndValues":["now","2025-04-20T11:43:21.399478287+08:00","entry",2,"next","2025-04-20T12:00:00+08:00"]}
+{"level":"INFO","time":"2025-04-20T11:43:21.399+0800","caller":"initialize/corn.go:17","msg":"schedule","keysAndValues":["now","2025-04-20T11:43:21.399478287+08:00","entry",3,"next","2025-04-20T12:00:00+08:00"]}
+{"level":"INFO","time":"2025-04-20T11:46:09.279+0800","caller":"initialize/corn.go:17","msg":"start","keysAndValues":null}
+{"level":"INFO","time":"2025-04-20T11:46:09.279+0800","caller":"core/server.go:25","msg":"server run success on ","address":"0.0.0.0:8080"}
+{"level":"INFO","time":"2025-04-20T11:46:09.279+0800","caller":"initialize/corn.go:17","msg":"schedule","keysAndValues":["now","2025-04-20T11:46:09.279400068+08:00","entry",1,"next","2025-04-20T12:00:00+08:00"]}
+{"level":"INFO","time":"2025-04-20T11:46:09.279+0800","caller":"initialize/corn.go:17","msg":"schedule","keysAndValues":["now","2025-04-20T11:46:09.279400068+08:00","entry",2,"next","2025-04-20T12:00:00+08:00"]}
+{"level":"INFO","time":"2025-04-20T11:46:09.279+0800","caller":"initialize/corn.go:17","msg":"schedule","keysAndValues":["now","2025-04-20T11:46:09.279400068+08:00","entry",3,"next","2025-04-20T12:00:00+08:00"]}
+{"level":"ERROR","time":"2025-04-20T11:46:13.125+0800","caller":"core/server.go:26","msg":"accept tcp [::]:8080: use of closed network connection"}
+{"level":"ERROR","time":"2025-04-20T11:46:13.128+0800","caller":"rabbitmq/es_consumer.go:58","msg":"消息解析失败:","error":"unexpected end of JSON input"}
+{"level":"ERROR","time":"2025-04-20T11:46:13.128+0800","caller":"rabbitmq/es_consumer.go:58","msg":"消息解析失败:","error":"unexpected end of JSON input"}
+{"level":"ERROR","time":"2025-04-20T11:46:13.128+0800","caller":"rabbitmq/es_consumer.go:58","msg":"消息解析失败:","error":"unexpected end of JSON input"}
+{"level":"ERROR","time":"2025-04-20T11:46:13.128+0800","caller":"rabbitmq/es_consumer.go:58","msg":"消息解析失败:","error":"unexpected end of JSON input"}
+{"level":"ERROR","time":"2025-04-20T11:46:13.128+0800","caller":"rabbitmq/es_consumer.go:58","msg":"消息解析失败:","error":"unexpected end of JSON input"}
+{"level":"ERROR","time":"2025-04-20T11:46:13.128+0800","caller":"rabbitmq/es_consumer.go:58","msg":"消息解析失败:","error":"unexpected end of JSON input"}
+{"level":"ERROR","time":"2025-04-20T11:46:13.128+0800","caller":"rabbitmq/es_consumer.go:58","msg":"消息解析失败:","error":"unexpected end of JSON input"}
+{"level":"ERROR","time":"2025-04-20T11:46:13.128+0800","caller":"rabbitmq/es_consumer.go:58","msg":"消息解析失败:","error":"unexpected end of JSON input"}
+{"level":"ERROR","time":"2025-04-20T11:46:13.128+0800","caller":"rabbitmq/es_consumer.go:58","msg":"消息解析失败:","error":"unexpected end of JSON input"}
+{"level":"ERROR","time":"2025-04-20T11:46:13.128+0800","caller":"rabbitmq/es_consumer.go:58","msg":"消息解析失败:","error":"unexpected end of JSON input"}
+{"level":"ERROR","time":"2025-04-20T11:46:13.128+0800","caller":"rabbitmq/es_consumer.go:58","msg":"消息解析失败:","error":"unexpected end of JSON input"}
+{"level":"ERROR","time":"2025-04-20T11:46:13.128+0800","caller":"rabbitmq/es_consumer.go:58","msg":"消息解析失败:","error":"unexpected end of JSON input"}
+{"level":"INFO","time":"2025-04-20T12:02:34.999+0800","caller":"core/server.go:25","msg":"server run success on ","address":"0.0.0.0:8080"}
+{"level":"INFO","time":"2025-04-20T12:02:34.999+0800","caller":"initialize/corn.go:17","msg":"start","keysAndValues":null}
+{"level":"INFO","time":"2025-04-20T12:02:34.999+0800","caller":"initialize/corn.go:17","msg":"schedule","keysAndValues":["now","2025-04-20T12:02:34.999785733+08:00","entry",1,"next","2025-04-20T13:00:00+08:00"]}
+{"level":"INFO","time":"2025-04-20T12:02:34.999+0800","caller":"initialize/corn.go:17","msg":"schedule","keysAndValues":["now","2025-04-20T12:02:34.999785733+08:00","entry",2,"next","2025-04-20T13:00:00+08:00"]}
+{"level":"INFO","time":"2025-04-20T12:02:34.999+0800","caller":"initialize/corn.go:17","msg":"schedule","keysAndValues":["now","2025-04-20T12:02:34.999785733+08:00","entry",3,"next","2025-04-20T13:00:00+08:00"]}
+{"level":"ERROR","time":"2025-04-20T12:08:18.829+0800","caller":"core/server.go:26","msg":"accept tcp [::]:8080: use of closed network connection"}
+{"level":"ERROR","time":"2025-04-20T12:08:18.832+0800","caller":"rabbitmq/es_consumer.go:58","msg":"消息解析失败:","error":"unexpected end of JSON input"}
+{"level":"ERROR","time":"2025-04-20T12:08:18.832+0800","caller":"rabbitmq/es_consumer.go:58","msg":"消息解析失败:","error":"unexpected end of JSON input"}
+{"level":"ERROR","time":"2025-04-20T12:08:18.832+0800","caller":"rabbitmq/es_consumer.go:58","msg":"消息解析失败:","error":"unexpected end of JSON input"}
+{"level":"ERROR","time":"2025-04-20T12:08:18.832+0800","caller":"rabbitmq/es_consumer.go:58","msg":"消息解析失败:","error":"unexpected end of JSON input"}
+{"level":"INFO","time":"2025-04-20T12:16:13.116+0800","caller":"core/server.go:25","msg":"server run success on ","address":"0.0.0.0:8080"}
+{"level":"INFO","time":"2025-04-20T12:16:13.116+0800","caller":"initialize/corn.go:17","msg":"start","keysAndValues":null}
+{"level":"INFO","time":"2025-04-20T12:16:13.117+0800","caller":"initialize/corn.go:17","msg":"schedule","keysAndValues":["now","2025-04-20T12:16:13.117078566+08:00","entry",1,"next","2025-04-20T13:00:00+08:00"]}
+{"level":"INFO","time":"2025-04-20T12:16:13.117+0800","caller":"initialize/corn.go:17","msg":"schedule","keysAndValues":["now","2025-04-20T12:16:13.117078566+08:00","entry",2,"next","2025-04-20T13:00:00+08:00"]}
+{"level":"INFO","time":"2025-04-20T12:16:13.117+0800","caller":"initialize/corn.go:17","msg":"schedule","keysAndValues":["now","2025-04-20T12:16:13.117078566+08:00","entry",3,"next","2025-04-20T13:00:00+08:00"]}
+{"level":"INFO","time":"2025-04-20T12:16:31.324+0800","caller":"middleware/logger.go:35","msg":"/api/base/captcha","status":200,"method":"POST","path":"/api/base/captcha","query":"","ip":"::1","user-agent":"Apifox/1.0.0 (https://apifox.com)","errors":"","cost":0.002763147}
+{"level":"INFO","time":"2025-04-20T12:17:08.357+0800","caller":"middleware/logger.go:35","msg":"/api/user/login","status":200,"method":"POST","path":"/api/user/login","query":"flag=email","ip":"::1","user-agent":"Apifox/1.0.0 (https://apifox.com)","errors":"","cost":0.00012698}
+{"level":"INFO","time":"2025-04-20T12:17:08.357+0800","caller":"utils/http.go:45","msg":"发起请求","url":"https://restapi.amap.com/v3/ip?ip=%3A%3A1&key=473d20d7f3e813c82cbd28979b7a049b"}
+{"level":"INFO","time":"2025-04-20T12:17:08.479+0800","caller":"service/gaode.go:52","msg":"解析后的 JSON 数据","parsed_data":{"adcode":[],"city":[],"info":"OK","infocode":"10000","province":[],"rectangle":[],"status":"1"},"status_code":200}
+{"level":"ERROR","time":"2025-04-20T12:17:08.526+0800","caller":"middleware/login_record.go:53","msg":"Failed to record login","error":"Error 1452 (23000): Cannot add or update a child row: a foreign key constraint fails (`blog_db`.`logins`, CONSTRAINT `fk_logins_user` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`))"}
+{"level":"INFO","time":"2025-04-20T12:17:56.443+0800","caller":"middleware/logger.go:35","msg":"/api/user/login","status":200,"method":"POST","path":"/api/user/login","query":"flag=email","ip":"::1","user-agent":"Apifox/1.0.0 (https://apifox.com)","errors":"","cost":0.000055411}
+{"level":"INFO","time":"2025-04-20T12:17:56.443+0800","caller":"utils/http.go:45","msg":"发起请求","url":"https://restapi.amap.com/v3/ip?ip=%3A%3A1&key=473d20d7f3e813c82cbd28979b7a049b"}
+{"level":"INFO","time":"2025-04-20T12:17:56.544+0800","caller":"service/gaode.go:52","msg":"解析后的 JSON 数据","parsed_data":{"adcode":[],"city":[],"info":"OK","infocode":"10000","province":[],"rectangle":[],"status":"1"},"status_code":200}
+{"level":"ERROR","time":"2025-04-20T12:17:56.582+0800","caller":"middleware/login_record.go:53","msg":"Failed to record login","error":"Error 1452 (23000): Cannot add or update a child row: a foreign key constraint fails (`blog_db`.`logins`, CONSTRAINT `fk_logins_user` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`))"}
+{"level":"ERROR","time":"2025-04-20T12:19:33.020+0800","caller":"core/server.go:26","msg":"accept tcp [::]:8080: use of closed network connection"}
+{"level":"INFO","time":"2025-04-20T12:19:35.253+0800","caller":"core/server.go:25","msg":"server run success on ","address":"0.0.0.0:8080"}
+{"level":"INFO","time":"2025-04-20T12:19:35.253+0800","caller":"initialize/corn.go:17","msg":"start","keysAndValues":null}
+{"level":"INFO","time":"2025-04-20T12:19:35.253+0800","caller":"initialize/corn.go:17","msg":"schedule","keysAndValues":["now","2025-04-20T12:19:35.253826339+08:00","entry",1,"next","2025-04-20T13:00:00+08:00"]}
+{"level":"INFO","time":"2025-04-20T12:19:35.253+0800","caller":"initialize/corn.go:17","msg":"schedule","keysAndValues":["now","2025-04-20T12:19:35.253826339+08:00","entry",2,"next","2025-04-20T13:00:00+08:00"]}
+{"level":"INFO","time":"2025-04-20T12:19:35.253+0800","caller":"initialize/corn.go:17","msg":"schedule","keysAndValues":["now","2025-04-20T12:19:35.253826339+08:00","entry",3,"next","2025-04-20T13:00:00+08:00"]}
+{"level":"INFO","time":"2025-04-20T12:19:57.988+0800","caller":"middleware/logger.go:35","msg":"/api/base/captcha","status":200,"method":"POST","path":"/api/base/captcha","query":"","ip":"::1","user-agent":"Apifox/1.0.0 (https://apifox.com)","errors":"","cost":0.001650387}
+{"level":"INFO","time":"2025-04-20T12:21:13.161+0800","caller":"middleware/logger.go:35","msg":"/api/user/login","status":200,"method":"POST","path":"/api/user/login","query":"flag=email","ip":"::1","user-agent":"Apifox/1.0.0 (https://apifox.com)","errors":"","cost":0.056951226}
+{"level":"INFO","time":"2025-04-20T12:21:13.161+0800","caller":"utils/http.go:45","msg":"发起请求","url":"https://restapi.amap.com/v3/ip?ip=%3A%3A1&key=473d20d7f3e813c82cbd28979b7a049b"}
+{"level":"INFO","time":"2025-04-20T12:21:13.245+0800","caller":"service/gaode.go:52","msg":"解析后的 JSON 数据","parsed_data":{"adcode":[],"city":[],"info":"OK","infocode":"10000","province":[],"rectangle":[],"status":"1"},"status_code":200}
+{"level":"INFO","time":"2025-04-20T12:21:29.926+0800","caller":"middleware/logger.go:35","msg":"/api/user/login","status":200,"method":"POST","path":"/api/user/login","query":"flag=email","ip":"::1","user-agent":"Apifox/1.0.0 (https://apifox.com)","errors":"","cost":0.000042731}
+{"level":"INFO","time":"2025-04-20T12:21:29.926+0800","caller":"utils/http.go:45","msg":"发起请求","url":"https://restapi.amap.com/v3/ip?ip=%3A%3A1&key=473d20d7f3e813c82cbd28979b7a049b"}
+{"level":"INFO","time":"2025-04-20T12:21:30.007+0800","caller":"service/gaode.go:52","msg":"解析后的 JSON 数据","parsed_data":{"adcode":[],"city":[],"info":"OK","infocode":"10000","province":[],"rectangle":[],"status":"1"},"status_code":200}
+{"level":"ERROR","time":"2025-04-20T12:21:30.043+0800","caller":"middleware/login_record.go:53","msg":"Failed to record login","error":"Error 1452 (23000): Cannot add or update a child row: a foreign key constraint fails (`blog_db`.`logins`, CONSTRAINT `fk_logins_user` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`))"}
+{"level":"INFO","time":"2025-04-20T12:22:36.021+0800","caller":"middleware/logger.go:35","msg":"/api/comment/create","status":200,"method":"POST","path":"/api/comment/create","query":"","ip":"::1","user-agent":"Apifox/1.0.0 (https://apifox.com)","errors":"","cost":0.012233277}
+{"level":"INFO","time":"2025-04-20T12:24:36.009+0800","caller":"middleware/logger.go:35","msg":"/api/article/like","status":200,"method":"POST","path":"/api/article/like","query":"","ip":"::1","user-agent":"Apifox/1.0.0 (https://apifox.com)","errors":"","cost":0.011768222}
+{"level":"INFO","time":"2025-04-20T12:26:04.102+0800","caller":"middleware/logger.go:35","msg":"/api/article/NAn0MZYBTQCKhk03Le64","status":200,"method":"GET","path":"/api/article/NAn0MZYBTQCKhk03Le64","query":"","ip":"::1","user-agent":"Apifox/1.0.0 (https://apifox.com)","errors":"","cost":0.00977659}
+{"level":"INFO","time":"2025-04-20T12:26:07.413+0800","caller":"middleware/logger.go:35","msg":"/api/article/NAn0MZYBTQCKhk03Le64","status":200,"method":"GET","path":"/api/article/NAn0MZYBTQCKhk03Le64","query":"","ip":"::1","user-agent":"Apifox/1.0.0 (https://apifox.com)","errors":"","cost":0.004479569}
+{"level":"ERROR","time":"2025-04-20T12:43:51.417+0800","caller":"core/server.go:26","msg":"accept tcp [::]:8080: use of closed network connection"}
+{"level":"ERROR","time":"2025-04-20T12:43:51.419+0800","caller":"rabbitmq/es_consumer.go:58","msg":"消息解析失败:","error":"unexpected end of JSON input"}
+{"level":"ERROR","time":"2025-04-20T12:43:51.420+0800","caller":"rabbitmq/es_consumer.go:58","msg":"消息解析失败:","error":"unexpected end of JSON input"}
+{"level":"ERROR","time":"2025-04-20T12:43:51.420+0800","caller":"rabbitmq/es_consumer.go:58","msg":"消息解析失败:","error":"unexpected end of JSON input"}
+{"level":"ERROR","time":"2025-04-20T12:43:51.420+0800","caller":"rabbitmq/es_consumer.go:58","msg":"消息解析失败:","error":"unexpected end of JSON input"}
+{"level":"ERROR","time":"2025-04-20T12:43:51.420+0800","caller":"rabbitmq/es_consumer.go:58","msg":"消息解析失败:","error":"unexpected end of JSON input"}
+{"level":"INFO","time":"2025-04-20T17:00:35.926+0800","caller":"initialize/corn.go:17","msg":"start","keysAndValues":null}
+{"level":"INFO","time":"2025-04-20T17:00:35.926+0800","caller":"core/server.go:25","msg":"server run success on ","address":"0.0.0.0:8080"}
+{"level":"INFO","time":"2025-04-20T17:00:35.927+0800","caller":"initialize/corn.go:17","msg":"schedule","keysAndValues":["now","2025-04-20T17:00:35.927193195+08:00","entry",1,"next","2025-04-20T18:00:00+08:00"]}
+{"level":"INFO","time":"2025-04-20T17:00:35.927+0800","caller":"initialize/corn.go:17","msg":"schedule","keysAndValues":["now","2025-04-20T17:00:35.927193195+08:00","entry",2,"next","2025-04-20T18:00:00+08:00"]}
+{"level":"INFO","time":"2025-04-20T17:00:35.927+0800","caller":"initialize/corn.go:17","msg":"schedule","keysAndValues":["now","2025-04-20T17:00:35.927193195+08:00","entry",3,"next","2025-04-20T18:00:00+08:00"]}
+{"level":"INFO","time":"2025-04-20T17:00:58.135+0800","caller":"middleware/logger.go:35","msg":"/api/base/captcha","status":200,"method":"POST","path":"/api/base/captcha","query":"","ip":"::1","user-agent":"Apifox/1.0.0 (https://apifox.com)","errors":"","cost":0.002079158}
+{"level":"INFO","time":"2025-04-20T17:01:32.290+0800","caller":"middleware/logger.go:35","msg":"/api/user/login","status":200,"method":"POST","path":"/api/user/login","query":"flag=email","ip":"::1","user-agent":"Apifox/1.0.0 (https://apifox.com)","errors":"","cost":0.064981332}
+{"level":"INFO","time":"2025-04-20T17:01:32.290+0800","caller":"utils/http.go:45","msg":"发起请求","url":"https://restapi.amap.com/v3/ip?ip=%3A%3A1&key=473d20d7f3e813c82cbd28979b7a049b"}
+{"level":"INFO","time":"2025-04-20T17:01:32.372+0800","caller":"service/gaode.go:52","msg":"解析后的 JSON 数据","parsed_data":{"adcode":[],"city":[],"info":"OK","infocode":"10000","province":[],"rectangle":[],"status":"1"},"status_code":200}
+{"level":"INFO","time":"2025-04-20T17:01:50.838+0800","caller":"middleware/logger.go:35","msg":"/api/user/list","status":200,"method":"GET","path":"/api/user/list","query":"","ip":"::1","user-agent":"Apifox/1.0.0 (https://apifox.com)","errors":"","cost":0.002137552}
+{"level":"INFO","time":"2025-04-20T17:03:00.898+0800","caller":"middleware/logger.go:35","msg":"/api/user/list","status":200,"method":"GET","path":"/api/user/list","query":"register=1","ip":"::1","user-agent":"Apifox/1.0.0 (https://apifox.com)","errors":"","cost":0.002180771}
+{"level":"INFO","time":"2025-04-20T17:03:04.916+0800","caller":"middleware/logger.go:35","msg":"/api/user/list","status":200,"method":"GET","path":"/api/user/list","query":"register=0","ip":"::1","user-agent":"Apifox/1.0.0 (https://apifox.com)","errors":"","cost":0.001776385}
+{"level":"INFO","time":"2025-04-20T17:05:39.173+0800","caller":"middleware/logger.go:35","msg":"/api/user/freeze","status":200,"method":"PUT","path":"/api/user/freeze","query":"","ip":"::1","user-agent":"Apifox/1.0.0 (https://apifox.com)","errors":"","cost":0.014520304}
+{"level":"INFO","time":"2025-04-20T17:06:45.107+0800","caller":"middleware/logger.go:35","msg":"/api/user/unfreeze","status":200,"method":"PUT","path":"/api/user/unfreeze","query":"","ip":"::1","user-agent":"Apifox/1.0.0 (https://apifox.com)","errors":"","cost":0.008307621}
+{"level":"INFO","time":"2025-04-20T17:07:19.201+0800","caller":"middleware/logger.go:35","msg":"/api/user/loginList","status":200,"method":"GET","path":"/api/user/loginList","query":"","ip":"::1","user-agent":"Apifox/1.0.0 (https://apifox.com)","errors":"","cost":0.002965647}
+{"level":"INFO","time":"2025-04-20T17:07:28.567+0800","caller":"middleware/logger.go:35","msg":"/api/user/loginList","status":200,"method":"GET","path":"/api/user/loginList","query":"","ip":"::1","user-agent":"Apifox/1.0.0 (https://apifox.com)","errors":"","cost":0.002369595}
+{"level":"ERROR","time":"2025-04-20T17:07:54.516+0800","caller":"core/server.go:26","msg":"accept tcp [::]:8080: use of closed network connection"}
+{"level":"ERROR","time":"2025-04-20T17:07:54.518+0800","caller":"rabbitmq/es_consumer.go:58","msg":"消息解析失败:","error":"unexpected end of JSON input"}
+{"level":"ERROR","time":"2025-04-20T17:07:54.518+0800","caller":"rabbitmq/es_consumer.go:58","msg":"消息解析失败:","error":"unexpected end of JSON input"}
+{"level":"ERROR","time":"2025-04-20T17:07:54.518+0800","caller":"rabbitmq/es_consumer.go:58","msg":"消息解析失败:","error":"unexpected end of JSON input"}
+{"level":"ERROR","time":"2025-04-20T17:07:54.518+0800","caller":"rabbitmq/es_consumer.go:58","msg":"消息解析失败:","error":"unexpected end of JSON input"}
+{"level":"ERROR","time":"2025-04-20T17:07:54.518+0800","caller":"rabbitmq/es_consumer.go:58","msg":"消息解析失败:","error":"unexpected end of JSON input"}
+{"level":"ERROR","time":"2025-04-20T17:07:54.518+0800","caller":"rabbitmq/es_consumer.go:58","msg":"消息解析失败:","error":"unexpected end of JSON input"}
+{"level":"ERROR","time":"2025-04-20T17:07:54.518+0800","caller":"rabbitmq/es_consumer.go:58","msg":"消息解析失败:","error":"unexpected end of JSON input"}

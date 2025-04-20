@@ -5,6 +5,7 @@ import (
 	"server/flag"
 	"server/global"
 	"server/initialize"
+	"server/rabbitmq"
 )
 
 func main() {
@@ -15,10 +16,14 @@ func main() {
 	global.Redis = initialize.ConnectRedis()
 	global.ESClient = initialize.ConnectEs()
 	defer global.Redis.Close()
+	global.RmqConn = initialize.RabbitmqInit()
+	defer global.RmqConn.Close()
 
 	flag.InitFlag()
 
 	initialize.InitCron()
+
+	go rabbitmq.StartESUpdateConsumer()
 
 	core.RunServer()
 }
