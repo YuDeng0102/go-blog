@@ -12,7 +12,7 @@ email:
     secret: crutbzcmqgptdjch
     is_ssl: true
 es:
-    url: http://127.0.0.1:9200
+    url: http://elasticsearch:9200
     username: ""
     password: ""
     is_console_print: true
@@ -26,8 +26,8 @@ jwt:
     refresh_token_expiry_time: 7d
     issuer: go_blog
 mysql:
-    host: 127.0.0.1
-    port: 3307
+    host: mysql
+    port: 3306
     config: charset=utf8mb4&parseTime=True&loc=Local
     db_name: blog_db
     username: root
@@ -49,11 +49,11 @@ qq:
     app_key: xxxxxxxxxxxxxxxx
     redirect_uri: http://xxx.xxx/xxx
 redis:
-    address: 127.0.0.1:6379
+    address: redis:6379
     password: ""
     db: 0
 rabbitmq:
-    dial: amqp://guest:guest@localhost:5672/
+    dial: amqp://guest:guest@rabbitmq:5672/
 system:
     host: 0.0.0.0
     port: 8080
@@ -62,6 +62,8 @@ system:
     use_multipoint: true
     sessions_secret: fZ9Jxfw5Kb2ra-UP6E3X2mG1LpcaV5mRUW-H6E2lwNs=
     oss_type: qiniu
+    admin_email: 2272776615@qq.com
+    admin_password: 041135sz
 upload:
     size: 20
     path: uploads
@@ -70,15 +72,15 @@ website:
     full_logo: http://sue7mxmf6.hn-bkt.clouddn.com/cff5211b793f64ff6fbda36479c2ffc8-20250417134306.jpeg
     title: yudeng的个人博客
     slogan: 博客标题
-    slogan_en: Blog Title
-    description: 博客描述
+    slogan_en: Blog 
+    description: 这是我的个人博客
     version: 1.0.0
-    created_at: "2025-1-15"
-    icp_filing: icp备案号
+    created_at: "2025-4-15"
+    icp_filing: 湘ICP备2025114244号
     public_security_filing: 公安备案号
     bilibili_url: https://space.bilibili.com/xxx
     gitee_url: https://gitee.com/xxx
-    github_url: https://github.com/xxx/
+    github_url: https://github.com/YuDeng0102
     name: 月影几度凉
     job: 学生
     address: 江苏苏州
