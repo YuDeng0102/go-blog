@@ -38,7 +38,7 @@ mysql:
 qiniu:
     zone: z2
     bucket: yudeng
-    img_path: http://sue7mxmf6.hn-bkt.clouddn.com/
+    img_path: http://image.yyyyyd.com.cn/
     access_key: Lj2fd6Jk6Yb39otS4yX_1DjxiNR54TNOi0yu7K-G
     secret_key: X5jBl33CErgivJBUhds2fLax62GFhAiEnvkffeQK
     use_https: false

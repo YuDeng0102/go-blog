@@ -2,6 +2,9 @@ FROM golang:1.23-alpine AS builder
 
 WORKDIR /app
 COPY . .
+ENV GOPROXY=https://goproxy.cn,direct \
+    GO111MODULE=on \
+    CGO_ENABLED=0
 RUN go mod tidy
 RUN CGO_ENABLED=0 GOOS=linux go build -o main .
 

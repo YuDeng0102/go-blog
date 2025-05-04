@@ -68,12 +68,16 @@ services:
       retries: 10
 
   backend:
-    build: .
+    image: yudeng2004/blog-backend:1.0
+    # build: .
     container_name: blog-backend
+    volumes:
+       - ./config.yaml:/app/config.yaml
+       - ./entrypoint.sh:/app/entrypoint.sh   
     ports:
       - "8080:8080"
     environment:
-      - ENV=production
+      - GOMAXPROCS=1           # 限制 Go 使用 1 个核心
     depends_on:
       mysql:
         condition: service_healthy
@@ -84,7 +88,12 @@ services:
       rabbitmq:
         condition: service_healthy
     networks:
-      - blog-network
+      - blog-network  
+    deploy:
+      resources:
+        limits:
+          memory: 1.5G        # 限制容器内存
+          cpus: '1.5'          # 限制 CPU 使用
 
 volumes:
   mysql_data:
@@ -95,3 +104,4 @@ volumes:
 networks:
   blog-network:
     driver: bridge
+    name: blog-network

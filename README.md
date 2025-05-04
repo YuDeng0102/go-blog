@@ -10,13 +10,18 @@ Gin + Gorm + Mysql + Redis + Elasticsearch + RabbitMQ
 3. 利用RabbitMQ异步更新Elasticsearch中文章的浏览量、评论量等信息,采用批量更新
 4. 使用Cron设置定时任务，爬取日历和热搜新闻信息并存储到Redis中
 5. 基于Docker Compose​​实现一键式容器化部署
-
+6. 使用七牛云存储图片，高德服务获取天气信息
 
 ## 部署
 需要安装docker和docker compose
 ### 后端
-修改`config.yaml`配置文件和`docker-compose.yaml`文件
+修改`config.yaml`配置文件和`docker-compose.yml`文件
 ```shell
-docker compose build
-docker compose up
+docker compose build 
+docker compose up -d
+```
+`docker-compose.yml`中如果需要build而不是利用打包的镜像,需要注释image这一行，取消注释`build .`
+```yaml
+ image: yudeng2004/blog-backend:1.0
+    # build: .
 ```
